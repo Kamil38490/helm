@@ -1,0 +1,57 @@
+apiVersion: v1
+entries:
+  nginx1:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-14T19:18:51.542496614+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 683d4f1ad3aeef0ce8408e2252064b4406b3ba3f34b8baaf733eb2fc0c0abde9
+    name: nginx1
+    type: application
+    urls:
+    - nginx1-0.1.0.tgz
+    version: 0.1.0
+  nginx2:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-14T19:18:51.546018493+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 0542c58fb2d08bb38d0942e3e0ad8075d1d6d6787e0d35cecdd277e7bfd6dd75
+    name: nginx2
+    type: application
+    urls:
+    - nginx2-0.1.0.tgz
+    version: 0.1.0
+  nginx3:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-14T19:18:51.548606139+01:00"
+    description: A Helm chart for Kubernetes
+    digest: cfdc4b950a8a20688bf787583d1bdcaa56d1a8215de23c4050abb9a38593467e
+    name: nginx3
+    type: application
+    urls:
+    - nginx3-1.1.tgz
+    version: "1.1"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-14T19:18:51.54765517+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 1c489dc40c4897364202704048738728f33a389527281830df63bce2a75c376f
+    name: nginx3
+    type: application
+    urls:
+    - nginx3-1.0.tgz
+    version: "1.0"
+  testchart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-11-14T19:18:51.549426977+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 3a3fb73bacbb1b6648d17739170364276b23db97db86c32d09adaa378e808667
+    name: testchart
+    type: application
+    urls:
+    - testchart-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-14T19:18:51.540328053+01:00"
