@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd
+  namespace: default
+  labels:
+    app: httpd-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: httpd-app
+  template:
+    metadata:
+      labels:
+        app: httpd-app
+    spec:
+      containers:
+        - name: httpd-app
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
+          ports:
+            - containerPort: 80
+
+

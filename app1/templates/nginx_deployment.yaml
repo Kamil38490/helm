@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment2
+  labels:
+    app: nginx2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx2
+  template:
+    metadata:
+      labels:
+        app: nginx2
+    spec:
+      containers:
+        - name: nginxcd
+          image: nginx:1.23.3
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /usr/share/nginx/html #nginx specific
+            - name: nginx-config2
+              mountPath: /etc/nginx/conf.d/ #nginx specific               
+            - name: cck-dane
+              mountPath: /centaurcck/bin
+            - name: cck-dane
+              mountPath: /centaurcck/wrk  
+                         
+      volumes:
+        - name: nginx-config2
+          configMap:
+            name: nginx-conf
+        - name: nginx-config
+          configMap:
+            name: my-config1
+        - name: cck-dane
+          persistentVolumeClaim:
+             claimName: cck-dane
+         
